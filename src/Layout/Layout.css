@@ -1,22 +1,20 @@
 .layout {
   display: flex;
-  height: 100%;
   width: 100%;
-}
-
-.layout__toolbar {
-  display: flex;
-  flex: 1;
+  height: 100vh;
 }
 
 .layout__sidebar {
   display: flex;
-  flex: 3;
+  flex: 4;
+  flex-direction: column;
+  background-color: lightgray;
 }
 
 .layout__data {
   display: flex;
-  flex: 9;
+  flex: 10;
+  flex-direction: column;
 }
 
 .layout__charts {

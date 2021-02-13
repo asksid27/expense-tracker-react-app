@@ -1,0 +1,11 @@
+.sidebar__cat {
+  padding-top: 40%;
+  margin: 4%;
+  font-weight: bold;
+  color: darkslategray;
+}
+
+.sidebar__catName {
+  margin: 5%;
+  padding-left: 5%;
+}

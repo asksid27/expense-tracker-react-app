@@ -1,0 +1,55 @@
+.header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+::placeholder {
+  color: white;
+}
+
+.headerIcon {
+  padding-top: 25px;
+  color: cornflowerblue;
+  transform: scale(1.5);
+  padding-right: 20px;
+  cursor: pointer;
+}
+
+.input {
+  padding: 20px;
+  padding-right: 30px;
+}
+
+.inputSearch {
+  width: 100%;
+  border: none;
+  background-color: grey;
+  color: white;
+  border-radius: 20px;
+  padding: 10px;
+  font-weight: 700;
+}
+
+.list {
+  list-style: none;
+  flex: 8;
+}
+
+.list__item {
+  padding-left: 20%;
+}
+
+.list li {
+  font-size: 20px;
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.list__cat {
+  color: gray;
+  font-weight: 200;
+  font-size: 12px;
+}
