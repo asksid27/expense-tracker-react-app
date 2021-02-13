@@ -1,0 +1,25 @@
+.layout {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.layout__toolbar {
+  display: flex;
+  flex: 1;
+}
+
+.layout__sidebar {
+  display: flex;
+  flex: 3;
+}
+
+.layout__data {
+  display: flex;
+  flex: 9;
+}
+
+.layout__charts {
+  display: flex;
+  flex: 6;
+}
