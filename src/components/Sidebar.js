@@ -1,16 +1,40 @@
+import { Component } from "react";
+
 import classes from "./Sidebar.css";
 import Aux from "../Aux";
 
-const sidebar = () => {
-  return (
-    <Aux>
-      <span className={classes.sidebar__cat}>CATEGORIES</span>
-      <span className={classes.sidebar__catName}>Food</span>
-      <span className={classes.sidebar__catName}>Travel</span>
-      <span className={classes.sidebar__catName}>Clothes</span>
-      <span className={classes.sidebar__catName}>Something</span>
-    </Aux>
-  );
-};
+class Sidebar extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      Categories: [],
+    };
+  }
 
-export default sidebar;
+  componentDidMount() {
+    fetch("http://localhost:8080/category/list-categories")
+      .then((res) => res.json())
+      .then((result) => {
+        console.log(result);
+        this.setState({
+          Categories: result,
+        });
+        console.log(this.state.Categories);
+      });
+  }
+
+  render() {
+    return (
+      <Aux>
+        <span className={classes.sidebar__cat}>CATEGORIES</span>
+        {this.state.Categories.map((item) => (
+          <span className={classes.sidebar__catName} key={item.id}>
+            {item.name}
+          </span>
+        ))}
+      </Aux>
+    );
+  }
+}
+
+export default Sidebar;
