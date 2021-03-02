@@ -13,11 +13,11 @@
 
 .layout__data {
   display: flex;
-  flex: 10;
+  flex: 13;
   flex-direction: column;
 }
 
 .layout__charts {
   display: flex;
-  flex: 6;
+  flex: 7;
 }
